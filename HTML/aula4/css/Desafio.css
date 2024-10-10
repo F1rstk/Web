@@ -1,0 +1,30 @@
+@charset "UTF-8";
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: linear-gradient(to right,black,white);
+}
+div{
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 100px 100px 200px rgba(136, 109, 93, 0.616);
+    width: 100px;
+    padding: 250px;
+    margin: auto;
+}
+h1{
+    color: #F39200;
+    text-align: center;
+    text-shadow: 1px;
+}
+.titulo{
+    color: red;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2#b{
+    color: pink;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
