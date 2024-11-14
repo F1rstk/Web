@@ -1,0 +1,99 @@
+@charset "UFT-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(197, 234, 255);
+    background-image: url(../quintal.JPEG);
+    background-position: left center;
+    background-size: unset;
+}
+
+main{
+    width: 90vw;
+    margin: auto;
+    background-color: rgb(255, 255, 255,0.2);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.phone{display:block;}
+.tablet{display:none}
+.pc{display:none}
+.tv{display:none}
+.print{display:none}
+
+img{
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5em;
+    color: black;
+}
+
+p{
+    margin-top: 10px;
+    text-align: justify;
+    text-align: center;
+    font-size: 25px;
+    text-indent: 30px;
+}
+
+@media screen and (min-width:768px) and (max-width:992px){ /*TABLET*/
+    .phone{display:none}
+    .tablet{display:block}
+    .pc{display:none}
+    .tv{display:none}
+    .print{display:none}
+
+    body{
+        background-image: url(C:\Users\filipe.sdiniz\Pictures\estradaDeTerra.jpg);
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){ /*DESKTOP*/
+    .phone{display:none}
+    .tablet{display:none}
+    .pc{display:block}
+    .tv{display:none}
+    .print{display:none}
+
+    body{
+        background-image: url(C:\Users\filipe.sdiniz\Pictures\estradaDeTerra.jpg);
+    }
+
+} 
+
+@media screen and (min-width:1200px){ /*GRANDES TELAS*/
+    .phone{display:none}
+    .tablet{display:none}
+    .pc{display:none}
+    .tv{display:block}
+    .print{display:none}
+
+    body{
+        background-image: url(C:\Users\filipe.sdiniz\Pictures\estradaDeTerra.jpg);
+    }
+
+    main{
+        width: 800px;
+    }
+}
+
+@media print{ /*IMPRESSORA*/
+    .phone{display:none}
+    .tablet{display:none}
+    .pc{display:none}
+    .tv{display:none}
+    .print{display:block}
+}

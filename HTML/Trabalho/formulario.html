@@ -10,10 +10,12 @@
 
 <body>
     <main>
+        
 
         <form action="formulario.php" method="POST" autocomplete="on">
             <div class="barra">
                 <H1 class="fonte">Formulário de Cadastro de Clientes</H1>
+                <div class="logo"><img class="logo1" src="LogoTabuleiro3.png" alt="logo marca"></div>
                 <br>
             </div>
             <fieldset>
@@ -67,7 +69,7 @@
                     <legend>Cliente:</legend>
                     <label class="datas" for="imes">Qu</label>
                     <input type="month" name="mes" id="imes" value="2024-11"><br>
-                    <label class="datas" for="ihora">Horário do Acesso</label>
+                    <label class="datas" for="ihora"><p class="text2">Qual horário o senhor deseja receber o seu produto?</p></label>
                     <input type="time" name="hora" id="ihora" value="08:00"><br>
                 </fieldset>
 
@@ -77,6 +79,8 @@
                 <div>
                     <input type="range" name="nivel" id="inivel" min="0" max="10" value="5" oninput="valor.innerHTML = Number(inivel.value)">
                     <output id="valor">5</output> <br>
+                    <label class="datas" for="icor">Cores:</label>
+                <input type="color" name="cor" id="icor" value="000000">
                 </div>
                 <label for="imsg">Mensagem:</label><br>
                 <textarea name="msg" id="imsg" cols="30" placeholder="Deixe uma Mensagem sobre o serviço" rows="2"></textarea>
@@ -84,6 +88,7 @@
                 <br>
             <input type="submit">
             <input type="reset" value="Limpar">
+           <a href="Index.html" target="_self" rel="external"><img class="logo3" src="icons8-desfazer-64.png" alt="desfazer"></a>
                 </fieldset>
         </form>
     </main>

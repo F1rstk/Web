@@ -1,0 +1,77 @@
+/* styles.css */
+ 
+/* Resetando margens e paddings para garantir um layout consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+  /* Estilo para o corpo */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+   
+  /* Cabeçalho */
+  header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+   
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+   
+  header .subtítulo {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-top: 5px;
+  }
+   
+  /* Corpo da página */
+  main {
+    padding: 20px;
+  }
+   
+  .noticia h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #3498db;
+  }
+   
+  .noticia p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+  }
+   
+  /* Imagem */
+  .imagem {
+    text-align: center;
+    margin: 20px 0;
+  }
+   
+  .imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+   
+  /* Rodapé */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+   
+  footer p {
+    font-size: 1rem;
+  }
+  
