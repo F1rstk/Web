@@ -62,35 +62,17 @@ main{
     background-image: url(/HTML/atividadeTema/Imagens/marvel4.png);
 }
 
-.menuLateral {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 11vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(/HTML/atividadeTema/Imagens/menu\ marvel.png);
-    position: fixed;
-    top: 0;
-    left: -9vw;
-    transition: transform 0.6s ease-in-out;
-}
- 
-.menuLateral:hover {
-    transform: translate(9vw, 0vh);
-}
- 
-.menuLateral2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.menulat{
+    background-color: #EC1C24;
+    width: 5%;
+    height: 100v;
     justify-content: center;
-    flex-grow: 0.6;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
 }
 
 .imglat{
-
 width: 50px;
 margin: 30px;
 }
@@ -103,6 +85,11 @@ margin: 30px;
 
 .img{
     width: 90%;
+   
+}
+
+.img2{
+    width: 100px;
 }
 
 .itemSec {
