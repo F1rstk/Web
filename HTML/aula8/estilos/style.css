@@ -1,41 +1,133 @@
-@charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inspiration&family=Jacques+Francois&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@100..900&display=swap');
+ 
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
-
-.wrapper{
-    background-image: url(/HTML/aula8/imagens/floresta2.png);
-    display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 200px 200px 200px 80px;
-    grid-auto-rows: 200px;
-    grid-gap: 5px;
-    
+ 
+body{
+    background-image: url(/HTML/aula8/imagens/Forest\ Trees\ Cartoon\ Background\,\ Forest\,\ Cartoon\,\ Background\ Background\ Image\ And\ Wallpaper\ for\ Free\ Download.jpg);
 }
-
+ 
 header{
-    background-color: black;
-    grid-column-start: 2;
-    grid-column-end: 12;
+    padding: 5px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-main{
+ 
+.container{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    gap: 10px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+ 
+}
+ 
+.item1, .item2, .item3, .item4, .item5, .item6{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+     gap: 12px;
+}
+ 
+.item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .item6:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 50%;
+}
+ 
+ 
+ 
+.item1{
     background-color: white;
-    grid-column-start: 3;
-    grid-column-end: 12;
 }
-
-aside{
-    background-color: blueviolet;
-    grid-column: 2 / 3;
-    grid-row: 2/4;
+ 
+.item2{
+    background-color: green;
 }
-
+ 
+.item3{
+    background-color: white;
+}
+ 
+.item4{
+    background-color: green;
+}
+ 
+.item5{
+    background-color: white;
+}
+ 
+.item6{
+    background-color:green;
+}
+ 
+img{
+    width: 300px;
+    height: 300px;
+}
+ 
+p{
+    font-family: "Roboto Slab", serif;
+}
+ 
 footer{
-background-color: brown;
-grid-column-start: 3;
-grid-column-end: 12;
+    padding: 5px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.logo{
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
 
+.search-bar {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+ 
+.search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+ 
+.search-bar button {
+    padding: 10px;
+    background-color: #4b4949;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+ 
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 coluna em celulares */
+        gap: 15px; /* Mais espaçamento entre os itens */
+    }
+ 
+    img {
+        max-width: 90%; /* Ajusta imagens menores em telas pequenas */
+    }
 }
