@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let peso = Number.parseFloat(prompt("Digite o seu peso: "))
+        let altura = Number.parseFloat(prompt("Digite a sua altura: "))
+
+        let altura2 = altura * altura
+        let imc= peso/altura2
+        imc= imc.toFixed(2);
+        alert("Seu IMC é " +imc)
+    </script>
+</body>
+</html>
