@@ -1,6 +1,6 @@
 function calcular(){
-    var Idade=window.document.getElementById('Idade')
-    var resp = window.document.getElementById('resp')
+    var Idade=window.document.getElementById('Idade');
+    var resp = window.document.getElementById('resp');
     
     var c1 = Number(Idade.value)
     
