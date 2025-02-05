@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/01arqjs.js" type="text/javascript" defer></script>
+    <title>Verificador de Pokémon</title>
+</head>
+<body>
+
+    <header>
+        <h1>Verificador de Pokémon</h1>
+    </header>
+    <section>
+        <div>
+            <p>
+                Selecione o seu Pokémon:
+                <select name="Pokémon" id="poké">
+                    <option value="" selected>--- Escolha ---</option>
+                    <option value="Frillish">Frillish</option>
+                    <option value="nidoran">nidoran</option>
+                    <option value="pichu">pichu</option>
+                    <option value="Pidove">Pidove</option>
+
+                </select>
+                    
+
+            </p>
+            <p>
+              Level:
+                <input type="number" id="Level" min="1" max="100" placeholder="Escolha o seu Level">
+            </p>
+            <p>
+                Sexo:
+                <input type="radio" name="sexo" id="masc" checked>
+                <label for="sexo">Masculino</label>
+                <input type="radio" name="sexo" id="fem" checked>
+                <label for="sexo">Feminino</label>
+                <input id="button" type="button" value="Calcular" onclick="Faca()">
+            </p>
+        </div>
+        <div>
+            <img id="imagem" src="" alt="Pokémon">
+            <p id="texto"></p>
+        </div>
+    </section>
+    <footer> 
+        <p>&copy; Filipe Diniz & Pedro Pita</p>
+    </footer>
+
+
+    
+</body>
+</html>
