@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffcc99;
+    padding: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffe6cc;
+}
+
+.produtos-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.produto {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produto button {
+    background: #ff9966;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #ffcc99;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #ff8000;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 150px;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.logo {
+    text-align: center;
+    padding: 10px 0;
+}
