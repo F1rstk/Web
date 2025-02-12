@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffcc99;
+    background-color: #fff3e0;
     padding: 15px;
 }
 
@@ -44,31 +44,25 @@ nav ul li a {
 
 .hero {
     text-align: center;
-    padding: 50px;
+    padding: 4px;
     background-color: #ffe6cc;
 }
 
-.produtos-container {
+.hero ul {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    padding: 20px;
+    list-style: none;
 }
 
-.produto {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.hero ul li {
+    margin: 0 10px;
 }
 
-.produto button {
-    background: #ff9966;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+.hero ul li a {
+    text-decoration: none;
+    color: #333;
 }
+
+
 
 footer {
     text-align: center;
@@ -98,13 +92,15 @@ footer {
     }
 }
 
-.logo img {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
-.logo {
-    text-align: center;
-    padding: 10px 0;
+
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: #333;
+    margin: 5px;
 }

@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
+        <div><img class="logo" src="sources/PRAIA SABÂO.png" alt="logo"></div>
         <div class="logo">Sabonetes Artesanais</div>
-        <div><img class="logo" src="sources/PRAIA SABÂO.png" alt=""></div>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Início</a></li>
@@ -22,15 +22,23 @@
     </header>
 
     <section class="hero">
-        <h1>Bem-vindo à nossa Loja de Sabonetes Artesanais</h1>
-        <p>Feitos com ingredientes naturais e muito carinho.</p>
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="formulario.html">Cadastro</a></li>
+            <div class="menu-hamburguer" onclick="toggleMenu()">☰</div>
+        </ul>
     </section>
 
-    <section class="destaques">
-        <h2>Mais Vendidos</h2>
-        <div class="produtos-container" id="mais-vendidos"></div>
-    </section>
+    <div class="container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
 
+
+    
     <footer>
         <p>&copy; 2025 Loja de Sabonetes</p>
     </footer>
