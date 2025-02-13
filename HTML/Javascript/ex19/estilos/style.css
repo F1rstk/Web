@@ -1,0 +1,28 @@
+.ratos01{
+    width: 80px;
+    height: 50px;
+}
+
+.ratos02{
+    width: 100px;
+    height: 70px;
+}
+
+.ratos03{
+    width: 120px;
+    height: 90px;
+}
+
+.ladoA{
+transform: scalex(1);
+}
+
+.ladoB{
+transform: scaleX(-1);
+}
+
+body{
+    background-image: url(../Soucers/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
