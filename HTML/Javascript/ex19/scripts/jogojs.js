@@ -1,5 +1,7 @@
 let altura=0;
 let largura=0;
+let vidas = 1;
+let tempo = 15;
 
 function ajustarPalco(){
 altura = window.innerHeight;
@@ -9,9 +11,33 @@ console.log(largura,altura);
 
 ajustarPalco();
 
-
+var VJCronometro = setInterval(function () { 
+    
+    tempo -= 1 
+    if(tempo < 0)
+    {
+        clearInterval(VJCronometro);
+        clearInterval(criarratos);
+      window.location.href = "vitoria.html";
+    }
+    else{
+         document.getElementById('meuCronemetro').innerHTML = tempo;
+        }
+},1000);
 
 function posRandomica(){
+
+if(document.getElementById('temporatos')){
+document.getElementById('temporatos') .remove();
+
+if(vidas>3){
+    window.location.href = "finaljogo.html";
+}
+else{document.getElementById("v" + vidas).src="Soucers/coracao vazio.png"
+    vidas++}
+
+}
+
 
 var posx = Math.floor(Math.random()*largura)-120;
 var posy = Math.floor(Math.random()*altura)-120;
@@ -29,8 +55,11 @@ ratos.style.left = `${posx}px`;
 ratos.style.top = `${posy}px`;
 ratos.className = tamanhoRatos() + ' ' + ladoAleatorio();
 ratos.style.position = 'absolute';
-//ratos.style.className =
+ratos.id = 'temporatos';
 
+ratos.onclick=function(){
+    this.remove();
+}
 
 }
 
@@ -59,4 +88,8 @@ function ladoAleatorio(){
             return 'ladoB';
         
     }
+}
+
+function reiniciar(){
+    window.location.href = 'index.html'
 }
