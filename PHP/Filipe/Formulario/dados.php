@@ -16,7 +16,7 @@ $nome=$_GET["nome"];
 
 $imc = $peso/($altura*$altura);
 
-echo "Seu nome é: " .$nome. "<br> sua altura é: " . $altura . "<br> seu peso é: " . $peso . "<br> seu IMC é: " .round($imc, 2);
+echo "Seu nome é: {$nome} <br> sua altura é: {$altura} <br> seu peso é:  {$peso}<br> seu IMC é: " .round($imc, 2);
 
 ?>
 
