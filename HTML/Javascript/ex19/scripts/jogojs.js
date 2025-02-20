@@ -3,6 +3,19 @@ let largura=0;
 let vidas = 1;
 let tempo = 15;
 
+let nivel = window.location.search
+    nivel = nivel.replace('?', '')
+    
+    if (nivel == 'facil'){
+            temporizador = 1500
+        } else if (nivel == 'normal'){
+            temporizador = 1000
+        } else {
+            temporizador = 800
+        }
+
+
+
 function ajustarPalco(){
 altura = window.innerHeight;
 largura = window.innerWidth;
@@ -91,5 +104,15 @@ function ladoAleatorio(){
 }
 
 function reiniciar(){
-    window.location.href = 'index.html'
+    window.location.href = 'telainicio.html'
+}
+
+function iniciar(){
+    let nivel = document.getElementById('combo').value
+    if(nivel == 0){
+        alert('Obrigatório a seleção de um nível!')
+    } else{
+       // window.alert(nivel)
+        window.location.href = 'index.html' + '?' + nivel
+    }
 }
