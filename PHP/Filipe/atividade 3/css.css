@@ -1,0 +1,408 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:0;
+	margin:0;
+	border:0;
+	text-decoration:none;
+	list-style:none;
+}
+
+@font-face {
+	font-family:'Conv_grandesign_neue_serif';
+	src: url('fonts/grandesign_neue_serif.eot');
+	src: local('☺'), url('fonts/grandesign_neue_serif.woff') format('woff'), url('fonts/grandesign_neue_serif.ttf') format('truetype'), url('fonts/grandesign_neue_serif.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+html, body{
+	background-color:#45431F;
+	height: 100%;
+	font-family:'Conv_grandesign_neue_serif',Sans-Serif;
+	color:#FFF;
+}
+
+body{
+	overflow:scroll;
+}
+
+h1{
+	margin:10px 0 10px 0;
+	text-align:left;
+	font-size:12px;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+p.sub-list-villasabor{
+	font-size:11px;
+	margin:-10px 0 5px 0px; 
+}
+
+#linha{
+	margin:30px 0 4px 0;
+	height:1px;
+	background-color:#595A36;
+}
+
+
+#corpo #corpo #conteudo{
+	min-height: 100%;
+}
+
+* html #corpo #conteudo{
+	height: 100%; /* hack para IE6 que trata height como min-height */
+}
+
+#topo{
+	z-index:2000;
+	position:fixed;
+	height:48px;
+	width:100%;
+	background:url(imagens/topo-bg.png) repeat-x;
+}
+
+#topo #corpo{
+	width:770px;
+	height:100%;
+	margin:auto;
+}
+
+#topo #corpo #menu{
+	margin-top:12px;
+	font-size:13px;
+	min-width:620px;
+	height:22px;
+	float:right;
+	text-align:right;
+}
+
+
+
+
+
+
+
+
+#topo #corpo #menu ul{
+	display:block;
+	position:relative;
+	left:4px;
+}
+
+#topo #corpo #menu ul li{
+	display:inline;
+	margin-left:20px;
+}
+
+#topo #corpo #menu ul li a{
+	font-family:'Conv_grandesign_neue_serif',Sans-Serif;
+	font-size:11px;
+	letter-spacing:1px;
+	color:#FFF;
+	outline: none;
+}
+
+#topo #corpo #menu ul li a:hover{
+	color:#E1E1E1;
+}
+
+
+
+/*
+	Submenu padaria===============================================================
+*/
+
+
+
+#topo #corpo #menu ul li ul.padaria{
+	position:absolute;
+	padding-top:20px;
+	left:90px;
+	
+}
+#topo #corpo #menu ul li ul.padaria li{
+	font-family:'Conv_grandesign_neue_serif',Sans-Serif;
+	font-size:11px;
+	text-transform:lowercase;
+	letter-spacing:1px;
+	display:none;
+	min-width:10px;
+	height:30px;
+	padding:0 10px;
+	line-height:30px;
+	text-align:left;
+	background:url(imagens/topo-bg2.png);
+}
+#topo #corpo #menu ul li:hover ul.doceria li{
+	display:block;
+}
+
+
+
+/*
+	Submenu villasabor===============================================================
+*/
+
+
+#topo #corpo #menu ul li ul.villasabor{
+	position:absolute;
+	padding-top:20px;
+	left:160px;
+	
+}
+#topo #corpo #menu ul li ul.villasabor li{
+	font-family:'Conv_grandesign_neue_serif',Sans-Serif;
+	font-size:11px;
+	text-transform:lowercase;
+	letter-spacing:1px;
+	display:none;
+	min-width:10px;
+	height:30px;
+	padding:0 10px;
+	line-height:30px;
+	text-align:left;
+	background:url(imagens/topo-bg2.png);
+}
+#topo #corpo #menu ul li:hover u.docerial li{
+	display:block;
+}
+
+/*
+	Submenu doceria===============================================================
+*/
+
+#topo #corpo #menu ul li ul.doceria{
+	position:absolute;
+	padding-top:20px;
+	left:334px;
+	
+}
+#topo #corpo #menu ul li ul.doceria li{
+	font-family:'Conv_grandesign_neue_serif',Sans-Serif;
+	font-size:11px;
+	text-transform:lowercase;
+	letter-spacing:1px;
+	display:none;
+	min-width:50px;
+	height:30px;
+	padding:0 10px;
+	line-height:30px;
+	text-align:left;
+	background:url(imagens/topo-bg2.png);
+}
+#topo #corpo #menu ul li:hover ul.doceria li{
+	display:block;
+}
+
+
+/*
+	Submenu PIZZAS===============================================================
+*/
+
+#topo #corpo #menu ul li ul.pizzaria{
+	position:absolute;
+	padding-top:20px;
+	left:400px;
+	
+}
+#topo #corpo #menu ul li ul.pizzaria li{
+	font-family:'Conv_grandesign_neue_serif',Sans-Serif;
+	font-size:11px;
+	text-transform:lowercase;
+	letter-spacing:1px;
+	display:none;
+	min-width:10px;
+	height:30px;
+	padding:0 10px;
+	line-height:30px;
+	text-align:left;
+	background:url(imagens/topo-bg2.png);
+}
+#topo #corpo #menu ul li:hover ul li{
+	display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#corpo{
+	z-index:1;
+	width:770px;
+	margin:auto;
+}
+
+#corpo #logo{
+	width:321px;
+	height:160px;
+	margin-top:56px;
+	float:right;
+}
+
+#corpo #conteudo{
+	position:relative;
+	width:770px;
+	margin-top:15px;
+}
+
+#corpo #redes{
+	z-index:5;
+	position:fixed;
+	width:77px;
+	margin-left:-90px;
+	height:116px;
+	top:230px;
+}
+
+#corpo #aneba{
+	position:relative;
+	width:1129px;
+	height:1040px;
+	float:right;
+	margin-top:-371px;
+	top:0px;
+	left:-277px;
+	background:url(../imagens/bg.png) no-repeat;
+}
+
+#rodape {
+	width:770px;
+	height:38px;
+	margin-top:10%;
+	margin-bottom:50px;
+	bottom: 0;
+	line-height:38px;
+	font-size:10px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	letter-spacing:1px;
+
+
+}
+
+#rodape img{
+	float:right;
+	margin-left:20px;
+}
+
+#rodape p{
+	font-size:10px;
+	display:inline;
+	color:#FFF;
+}
+
+#info{
+	width:100%;
+	margin-bottom:80px;
+}
+
+#info p{
+	display:inline;
+	color:#FFF;
+	font-size:10px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	letter-spacing:1px;
+}
+
+
+/*
+=====================================================================PAGINA HOME===============================================================
+*/
+
+
+#home-slide{
+	width:770px;
+	height:268px;
+}
+
+#home-texto{
+	width:770px;
+	height:268px;
+	margin-top:52px;
+	background:url(../imagens/scroll-bg.png);
+	padding-top:1px;
+	font-size:12px;
+	line-height:25px;
+}
+
+
+#home-texto #scrollbar1 { width: 100%; clear: both; margin: 20px 0 10px; }
+#home-texto #scrollbar1 .viewport { width: 750px; height: 230px; overflow: hidden; position: relative; }
+#home-texto #scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; padding:0 20px ; }
+#home-texto #scrollbar1 .thumb .end,
+#home-texto #scrollbar1 .thumb { background-color: #595F21; }
+#home-texto #scrollbar1 .scrollbar { position: relative; float: right; width: 15px; }
+#home-texto #scrollbar1 .track { background-color: #000; height: 100%; width:2px; position: relative; padding: 0 1px; }
+#home-texto #scrollbar1 .thumb { height:60px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:-2px; }
+#home-texto #scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#home-texto #scrollbar1 .disable{ display: none; }
+
+/*
+scroll 2
+*/
+
+#home2-texto{
+	width:770px;
+	height:140px;
+	margin-top:30px;
+	background:url(../imagens/scroll-bg.png);
+	padding-top:1px;
+	font-size:12px;
+	line-height:25px;
+}
+
+#home2-texto2{
+	width:725px;
+	min-height:50px;
+	padding:23px;
+	margin-top:15px;
+	background:url(../imagens/scroll-bg.png);
+	font-size:12px;
+	line-height:25px;
+}
+
+#home2-texto2 ul li{
+	line-height:17px;
+	margin-top:10px;
+}
+
+#home2-texto2 ul li p{
+	margin-top:1px;
+}
+
+#home2-texto #scrollbar2 { width: 100%; clear: both; margin: 20px 0 10px; }
+#home2-texto #scrollbar2 .viewport { width: 750px; height: 100px; overflow: hidden; position: relative; }
+#home2-texto #scrollbar2 .overview { list-style: none; position: absolute; left: 0; top: 0; padding:0 20px ; }
+#home2-texto #scrollbar2 .thumb .end,
+#home2-texto #scrollbar2 .thumb { background-color: #595F21; }
+#home2-texto #scrollbar2 .scrollbar { position: relative; float: right; width: 15px; }
+#home2-texto #scrollbar2 .track { background-color: #000; height: 100%; width:2px; position: relative; padding: 0 1px; }
+#home2-texto #scrollbar2 .thumb { height:60px; width: 8px; cursor: pointer; overflow: hidden; position: absolute; top: 0; left:-2px; }
+#home2-texto #scrollbar2 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#home2-texto #scrollbar2 .disable{ display: none; }
+
+
+
