@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .navbar {
+    background-color: #1d2437;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand img {
+    margin-right: 10px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+  }
+  
+  .card-login {
+    width: 350px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card-header {
+    background-color: #f1f1f1;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #1d2437;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #d8ae5e;
+  }
+  
+  .text-danger {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .text-primary {
+    color: #007bff;
+    font-size: 14px;
+  }
+  
+  .text-primary a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .text-primary a:hover {
+    text-decoration: underline;
+  }
+  
+  .logo-center {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 200px;
+  }
+  
