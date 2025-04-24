@@ -1,46 +1,27 @@
 <?php
 session_start();
-
-//Usuários pré-cadastrados
-$usuarios = array(
-    ['id' => '1',
-    'perfil' => 'adm',
-    'nome' =>  'Filipe',
-    'email' => 'Filipesantos@gmail.com',
-    'senha' => '123'],
-    ['id' => '2',
-    'perfil' => 'user',
-    'nome' =>  'Batman',
-    'email' => 'Robinrabudo@gmail.com',
-    'senha' => '444'],
-    ['id' => '3',
-    'perfil' => 'user',
-    'nome' => 'Yasuo', 
-    'email' => 'espadinhas@gmail.com', 
-    'senha' => '0']
-);
+require 'config.php';
 
 $usuarioAutenticado = false;
 
 //RECEBENDO OS DADOS VIA MÉTODO GET
 $emailUsuario = $_GET['email'];
-$senhaUsuario = $_GET['senha'];
+$senhaUsuario = md5($_GET['senha']);
 
+//BUSCANDO NO BANCO AS INFORMAÇÕES
+    $sql = "SELECT * FROM usuarios WHERE email='{$emailUsuario}'";
+    $res = $conexao->query($sql);
+    $row = $res->fetch_object();
 
 // AUTENTICANDO O USUÁRIO
-for ($idx = 0; $idx < count($usuarios); $idx++) {
-    if ($emailUsuario == $usuarios[$idx]['email'] && $senhaUsuario == $usuarios[$idx]['senha']) {
+    if ($emailUsuario == $row->email && $senhaUsuario == $row->senha) {
         $usuarioAutenticado = true;
-        $_SESSION['id'] = $usuarios[$idx]['id'];
-        $_SESSION['perfil'] = $usuarios[$idx]['perfil'];
-        $_SESSION['nome'] = $usuarios[$idx]['nome'];
-        break;
+        $_SESSION['id'] = $row-> id_usuario;
+        $_SESSION['perfil'] = $row->perfil;
+        $_SESSION['nome'] = $row->nome;
     } else {
         $usuarioAutenticado = false;
     }
-}
-
-  
 
 if($usuarioAutenticado){
     // VALIDANDO A SESSÃO
@@ -50,8 +31,4 @@ if($usuarioAutenticado){
     // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'nao';
     header('location: index.php?login=erro');
-}   
-
-
-
-?>
+}

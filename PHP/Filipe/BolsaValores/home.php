@@ -1,5 +1,11 @@
 <?php
 require_once "validador_acesso.php";
+require_once "config.php";
+
+$sql = "SELECT perfil FROM usuarios WHERE id_usuario ={$_SESSION['id']}";
+$res = $conexao->query($sql);
+$row = $res->fetch_object();
+
 ?>
 
 <html>
@@ -89,7 +95,7 @@ require_once "validador_acesso.php";
 
     <nav class="navbar">
       <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         Leão Investimentos
       </a>
       <ul class="navbar-nav flex-row ml-auto">
@@ -101,7 +107,7 @@ require_once "validador_acesso.php";
 
     <!-- Banner -->
     <div class="container banner">
-      <img src="banner-bolsa.png" alt="Banner Bolsa de Valores" class="img-fluid rounded">
+      <img src="imagens/banner-bolsa.png" alt="Banner Bolsa de Valores" class="img-fluid rounded">
     </div>
 
     <!-- Menu -->
@@ -112,42 +118,134 @@ require_once "validador_acesso.php";
             <div class="card-header">Menu</div>
             <div class="card-body">
               <div class="row">
-                <div class="col-6 d-flex justify-content-center">
+                <div class="col-2 d-flex justify-content-center">
                   <a href="abrir_chamado.php">
-                    <img src="app-bolsa-de-valores.png" width="70" height="70">
+                    <img src="imagens/app-bolsa-de-valores.png" width="70" height="70">
+                    <p>&nbspAbrir</p>
                   </a>
                 </div>
-                <div class="col-6 d-flex justify-content-center">
+                <div class="col-2 d-flex justify-content-center">
                   <a href="consultar_chamado.php">
-                    <img src="documento.png" width="70" height="70">
+                    <img src="imagens/documento.png" width="70" height="70">
+                    <p>&nbspConsultar</p>
                   </a>
                 </div>
+                <?php if ($row->perfil != 'Adm' && $row->perfil != 'Tec') { ?>
+                <div class="col-6 d-flex justify-content-center">
+                  <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                    <img src="imagens/icons8-editar-64.png" width="70" height="70">
+                    <p>&nbspEditar</p>
+                  </a>
+                </div>
+
+                <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="imagens/icons8-authorize-64.png" width="70" height="70">
+                  <p>Autorizar</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="imagens/icons8-usuário-macho-pele-tipo-2-100.png" width="70" height="70">
+                  <p>&nbspUsuários</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="imagens/icons8-relatório-64.png" width="70" height="70">
+                  <p>Relatórios</p>
+                </a>
+              </div>
+
+              <?php } else if ($row-> perfil == 'Tec') { ?>
+                <div class="col-2 d-flex justify-content-center">
+                  <a href="edit_chamado.php">
+                    <img src="imagens/icons8-editar-64.png" width="70" height="70">
+                    <p>&nbspEditar</p>
+                  </a>
+                </div>
+
+                <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="imagens/icons8-authorize-64.png" width="70" height="70">
+                  <p>Autorizar</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="imagens/icons8-usuário-macho-pele-tipo-2-100.png" width="70" height="70">
+                  <p>&nbspUsuários</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="imagens/icons8-relatório-64.png" width="70" height="70">
+                  <p>Relatórios</p>
+                </a>
+              </div>
+
+                <?php } else { ?>
+                <div class="col-2 d-flex justify-content-center">
+                  <a href="editar_chamado.php">
+                    <img src="imagens/icons8-editar-64.png" width="70" height="70">
+                    <p>&nbspEditar</p>
+                  </a>
+                </div>
+
+                <div class="col-2 d-flex justify-content-center">
+                <a href="autorizar_usuarios.php">
+                  <img src="imagens/icons8-authorize-64.png" width="70" height="70">
+                  <p>Autorizar</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="usuarios.php">
+                  <img src="imagens/icons8-usuário-macho-pele-tipo-2-100.png" width="70" height="70">
+                  <p>&nbspUsuários</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="relatorios.php">
+                  <img src="imagens/icons8-relatório-64.png" width="70" height="70">
+                  <p>Relatórios</p>
+                </a>
+              </div>
+              <?php } ?>
               </div>
             </div>
           </div>
         </div>
       </div>
+ 
+     
+      
 
     <!-- Carrossel -->
     <div class="container mt-4">
       <div id="carrosselBolsa" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="carrossel1.png" class="d-block w-100" alt="Investimento 1">
+            <img src="imagens/carrossel1.png" class="d-block w-100" alt="Investimento 1">
             <div class="carousel-caption d-none d-md-block">
               <h5>Invista no seu futuro</h5>
               <p>Construir patrimônio começa com um passo consciente hoje.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="carrossel2.png" class="d-block w-100" alt="Investimento 2">
+            <img src="imagens/carrossel2.png" class="d-block w-100" alt="Investimento 2">
             <div class="carousel-caption d-none d-md-block">
               <h5>Bolsa não é cassino</h5>
               <p>Com informação e estratégia, você investe com segurança.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="carrossel3.png" class="d-block w-100" alt="Investimento 3">
+            <img src="imagens/carrossel3.png" class="d-block w-100" alt="Investimento 3">
             <div class="carousel-caption d-none d-md-block">
               <h5>Seja protagonista</h5>
               <p>Faça o dinheiro trabalhar por você com ações e fundos.</p>
@@ -173,7 +271,7 @@ require_once "validador_acesso.php";
           <h3>Notícias sobre Investimentos na Bolsa</h3>
           <div class="card-deck mt-3">
             <div class="card news-card">
-              <img src="ibovespa.jpg" class="card-img-top" alt="Ibovespa">
+              <img src="imagens/ibovespa.jpg" class="card-img-top" alt="Ibovespa">
               <div class="card-body">
                 <h5 class="card-title">Ibovespa fecha em alta</h5>
                 <p class="card-text">O principal índice da bolsa brasileira fechou o dia em alta impulsionado por ações de bancos e commodities.</p>
@@ -183,7 +281,7 @@ require_once "validador_acesso.php";
               </div>
             </div>
             <div class="card news-card">
-              <img src="Dolar.avif" class="card-img-top" alt="Dólar">
+              <img src="imagens/Dolar.avif" class="card-img-top" alt="Dólar">
               <div class="card-body">
                 <h5 class="card-title">Dólar recua frente ao real</h5>
                 <p class="card-text">A moeda americana caiu 0,8% nesta quinta-feira com foco na política monetária dos EUA.</p>
@@ -193,7 +291,7 @@ require_once "validador_acesso.php";
               </div>
             </div>
             <div class="card news-card">
-              <img src="Petrobras.jpg" class="card-img-top" alt="Petrobras">
+              <img src="imagens/Petrobras.jpg" class="card-img-top" alt="Petrobras">
               <div class="card-body">
                 <h5 class="card-title">Ações da Petrobras disparam</h5>
                 <p class="card-text">Com novo plano estratégico, os papéis da estatal subiram mais de 4% na B3.</p>

@@ -1,28 +1,20 @@
 <?php
     require_once "validador_acesso.php";
- 
-   
-    $id = str_replace('|', '-', $_SESSION['id']);
-    $perfil = str_replace('|', '-', $_SESSION['perfil']);
-    $nome = str_replace('|', '-', $_SESSION['nome']);
-    $titulo = str_replace('|', '-', $_POST['titulo']);
-    $categoria = str_replace('|', '-', $_POST['categoria']);
-    $descricao = str_replace('|', '-', $_POST['descricao']);
-   
-   
-    $dados = $id . '|' . $perfil . '|'  . $nome . '|' . $titulo . '|' . $categoria . '|' . $descricao . PHP_EOL;
- 
-    var_dump($dados);
- 
-    //Abrindo o arquivo e armazenando em uma variável
-    $arquivo = fopen('../../../app_help_desk_cima/registros.hd','a'); // esse 'a' significa "Abre somente para escrita; coloca o ponteiro do arquivo no final do arquivo. Se o arquivo não existir, tenta criá-lo. Neste modo, fseek() não tem efeito, a escrita é sempre adicionada."
-   
-   
-    fwrite($arquivo, $dados);
-   
-    fclose($arquivo);
- 
-   
-    header('location: abrir_chamado.php?cadastro=efetuado')
+    require 'config.php';
+
+    $titulo = $_POST['titulo'];
+    $categoria = $_POST['categoria'];
+    $descricao = $_POST['descricao'];
+    $id_usuario = $_SESSION['id'];
+    $statuschamado = 'Aberto';
+
+    //Inserção de dados no banco
+    $sql = "INSERT INTO chamados(titulo, categoria, descricao, id_usuario, statuschamado) VALUES('{$titulo}', '{$categoria}', '{$descricao}', '{$id_usuario}', '{$statuschamado}')";
+
+    $res = $conexao->query($sql);
+
+        if($res==true){
+            //Redirecionando o arquivo e passando os dados para efetivar um aviso com alert em javascript
+            header('location: abrir_chamado.php?cadastro=efetuado');
+        } else { header('location: abrir_chamado.php?cadastro=falha');}
 ?>
- 
