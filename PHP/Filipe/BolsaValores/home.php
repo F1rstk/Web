@@ -161,7 +161,7 @@ $row = $res->fetch_object();
 
               <?php } else if ($row-> perfil == 'Tec') { ?>
                 <div class="col-2 d-flex justify-content-center">
-                  <a href="edit_chamado.php">
+                  <a href="editar_chamado.php">
                     <img src="imagens/icons8-editar-64.png" width="70" height="70">
                     <p>&nbspEditar</p>
                   </a>

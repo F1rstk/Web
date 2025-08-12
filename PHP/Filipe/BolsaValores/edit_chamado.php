@@ -6,7 +6,7 @@ $sql = "SELECT * FROM chamados WHERE id_chamado = {$_GET['id']}";
 $res = $conexao->query($sql);
 $qtd = $res->num_rows;
 $row = $res->fetch_object();
-
+ 
 $sql = "SELECT * FROM usuarios";
 $resusuarios = $conexao->query($sql);
 $qtdusuarios = $resusuarios->num_rows;
